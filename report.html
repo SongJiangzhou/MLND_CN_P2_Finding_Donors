@@ -12507,7 +12507,8 @@ Isabelle, G., Jason, W., Stephen B. et al. Gene Selection for Cancer Classificat
 <h3 id="&#27169;&#22411;3">&#27169;&#22411;3<a class="anchor-link" href="#&#27169;&#22411;3">&#182;</a></h3><p><strong>模型名称</strong></p>
 <p>回答：集成方法 Gradient Boosting。</p>
 <p><strong>描述一个该模型在真实世界的一个应用场景。（你需要为此做点研究，并给出你的引用出处）</strong></p>
-<p>回答：</p>
+<p>回答：Gradient Boosting可用于预测电力负荷。
+SouhaibBen Taieb, Rob J.Hyndman. A gradient boosting approach to the Kaggle load forecasting competition[J]. International Journal of Forecasting, 30(2), 382 - 394, 2014.</p>
 <p><strong>这个模型的优势是什么？他什么情况下表现最好？</strong></p>
 <p>回答：这个模型的优点是：</p>
 <ol>
@@ -12768,8 +12769,8 @@ GradientBoostingClassifier trained on 28941 samples.
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答：</strong></p>
 <ul>
-<li>训练过程：再Gradient Boosting模型的每轮训练迭代过程中，模型根据当前的状态计算训练的目标，训练好一个弱分类器后，再使用一定的权重将这个分类器累加到现有模型中。</li>
-<li>预测过程：使用每个弱分类器预测结果，将结果以一定权重累加，选择可能性最大的结果作为预测结果。</li>
+<li>训练过程：在Gradient Boosting模型的每轮训练迭代过程中，根据当前模型损失函数的负梯度信息来训练新加入的弱分类器，然后将训练好的弱分类器累加到现有模型中。</li>
+<li>预测过程：使用模型中的每个弱分类器预测结果，将各个弱分类器的预测结果累加，即为预测结果。</li>
 </ul>
 
 </div>
@@ -12967,6 +12968,7 @@ Final F-score on the validation data: 0.7664
 <li>特征4: age 年纪 相同职业，工作的时间越长，工资水平往往更高</li>
 <li>特征5: education_level 教育程度 受教育程度越高，在进入职场时的工资水平更高</li>
 </ul>
+<p>特征从最重要开始排序：capital-gain, capital-loss, occupital-loss, age, education_level</p>
 
 </div>
 </div>
